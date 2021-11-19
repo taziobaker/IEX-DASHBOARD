@@ -15,7 +15,7 @@ if screen == 'Overview':
   r = requests.get(FREE)
   response_json = r.json()
 
-  QUOTE = f"https://cloud.iexapis.com/stable/stock/{symbol}/quote?token={config.sk_05f62d0b97b84cfbb15650bc980058b0}"
+  QUOTE = f"https://cloud.iexapis.com/stable/stock/{symbol}/quote/iexRealtimePrice?token={config.sk_05f62d0b97b84cfbb15650bc980058b0}"
   r = requests.get(QUOTE)
   response_json = r.json()
   
