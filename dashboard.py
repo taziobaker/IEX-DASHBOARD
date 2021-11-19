@@ -11,7 +11,7 @@ screen = st.sidebar.selectbox("View", ('Overview', 'Fundamentals', 'News', 'Owne
 st.title(screen)
 
 if screen == 'Overview':
-  FREE = f"https://cloud.iexapis.com/stable/tops?token={config.IEX_API_TOKEN}&symbols={symbol}"
+  FREE = f"https://cloud.iexapis.com/stable/tops?token={config.sk_05f62d0b97b84cfbb15650bc980058b0}&symbols={symbol}"
   r = requests.get(FREE)
   response_json = r.json()
   st.write
