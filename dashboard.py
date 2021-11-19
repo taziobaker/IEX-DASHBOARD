@@ -19,20 +19,20 @@ if screen == 'Overview':
   #r = requests.get(url)
   #response_Qjson = r.json()
   
-  col1, col2 = st.columns (2)
+  #col1, col2 = st.columns (2)
   
-  with col1:
+  #with col1:
     #st.subheader.write("FREE:")
-    st.write(response_Fjson)
+  st.write(response_Fjson)
   
-  with col2:
+  #with col2:
     #st.subheader.write("QUOTE:")
     #st.write(response_Qjson)
   
   
 
-if screen == 'Fundamentals':
-  pass
+#if screen == 'Fundamentals':
+#pass
 
 # Free IEX price for AMC
 #https://cloud.iexapis.com/stable/tops?token=YOUR_TOKEN_HERE&symbols=amc
