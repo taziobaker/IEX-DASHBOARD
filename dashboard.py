@@ -22,11 +22,11 @@ if screen == 'Overview':
   col1, col2 = st.columns (2)
   
   with col1:
-    st.subheader.write("FREE:")
+    #st.subheader.write("FREE:")
     st.write(FREE)
   
   with col2:
-    st.subheader.write("QUOTE:")
+    #st.subheader.write("QUOTE:")
     st.write(QUOTE)
   
   
