@@ -1,2 +1,2 @@
 def format_number(number):
-return f"{number:,}"
+  return f"{number:,}"
