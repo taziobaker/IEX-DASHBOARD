@@ -1,9 +1,7 @@
 import streamlit as st
 import requests
 import config
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
+
 from helpers import format_number
 
 symbol = st.sidebar.text_input("Symbol", value="AMC")
