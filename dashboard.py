@@ -11,7 +11,7 @@ screen = st.sidebar.selectbox("View", ('Overview', 'Fundamentals', 'News', 'Owne
 st.title(screen)
 
 if screen == 'Overview':
-  url = f"https://cloud.iexapis.com/stable/tops?token={config.sk_05f62d0b97b84cfbb15650bc980058b0}&symbols={symbol}&lastSalePrice"
+  url = f"https://cloud.iexapis.com/stable/tops?token={config.sk_05f62d0b97b84cfbb15650bc980058b0}&symbols={symbol}%lastSalePrice"
   r = requests.get(url)
   response_Fjson = r.json()
 
