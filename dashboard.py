@@ -13,7 +13,7 @@ st.title(screen)
 if screen == 'Overview':
   url = f"https://cloud.iexapis.com/stable/tops?token={config.sk_05f62d0b97b84cfbb15650bc980058b0}&symbols={symbol}"
   r = requests.get(url)
-  response_Fjson = r.json('lastSalePrice')
+  response_Fjson = r.json("lastSalePrice")
 
   url = f"https://cloud.iexapis.com/stable/stock/{symbol}/quote/iexRealtimePrice?token={config.sk_05f62d0b97b84cfbb15650bc980058b0}"
   r = requests.get(url)
