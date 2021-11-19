@@ -15,9 +15,13 @@ if screen == 'Overview':
   #r = requests.get(url)
   #response_Fjson = r.json()
 
-  url = f"https://cloud.iexapis.com/stable/stock/{symbol}/quote/iexRealtimePrice?token={config.sk_05f62d0b97b84cfbb15650bc980058b0}"
+  #url = f"https://cloud.iexapis.com/stable/stock/{symbol}/quote/iexRealtimePrice?token={config.sk_05f62d0b97b84cfbb15650bc980058b0}"
+  #r = requests.get(url)
+  #response_Qjson = r.json()
+  
+  url = f"https://cloud.iexapis.com/stable/stock/{symbol}/chart/1d?token={config.sk_05f62d0b97b84cfbb15650bc980058b0}"
   r = requests.get(url)
-  response_Qjson = r.json()
+  response_Cjson = r.json()
   
   #col1, col2 = st.columns (2)
   
@@ -27,7 +31,9 @@ if screen == 'Overview':
   
   #with col2:
     #st.subheader.write("QUOTE:")
-  st.write(response_Qjson)
+  #st.write(response_Qjson)
+  
+  st.line_chart(response_Cjson)
   
   
 
