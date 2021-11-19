@@ -1,7 +1,8 @@
 import streamlit as st
 import requests
 import config
-
+import pandas as pd
+import numpy as np
 from helpers import format_number
 
 symbol = st.sidebar.text_input("Symbol", value="AMC")
@@ -19,6 +20,11 @@ if screen == 'Overview':
   #r = requests.get(url)
   #response_Qjson = r.json()
   
+  chart_data = pd.DataFrame(
+    np.random.randn(20, 3),
+    columns=['a', 'b', 'c'])
+  st.line_chart(chart_data)
+
   url = f"https://cloud.iexapis.com/stable/stock/{symbol}/chart/1d?token={config.sk_05f62d0b97b84cfbb15650bc980058b0}"
   r = requests.get(url)
   response_Cjson = r.json()
