@@ -31,11 +31,8 @@ if screen == 'Overview':
   
   #with col2:
     #st.subheader.write("QUOTE:")
-  st.title(response_Qjson)
-  st.header(response_Qjson)
-  st.header(response_Qjson)
+  st.header(symbol)
   st.subheader(response_Qjson)
-  st.write(response_Qjson)
   
   #st.line_chart(response_Cjson)
   
