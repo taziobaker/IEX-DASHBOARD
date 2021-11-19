@@ -27,7 +27,7 @@ if screen == 'Overview':
   
   #with col2:
     #st.subheader.write("QUOTE:")
-    st.write(response_Qjson)
+  st.write(response_Qjson)
   
   
 
