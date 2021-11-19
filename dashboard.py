@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import config
 
-symbol = st.sidebard.text_input("Symbol", value="AMC")
+symbol = st.sidebar.text_input("Symbol", value="AMC")
 
 screen = st.sidebar.selectbox("View", ('Overview', 'Fundamentals', 'News', 'Ownership', 'Technicals'))
 
