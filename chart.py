@@ -12,3 +12,6 @@ def load_data():
   hrml = pd.read_html(url, header = 0)
   df = html[0]
   return df
+
+df = load_data()
+df
