@@ -11,23 +11,23 @@ screen = st.sidebar.selectbox("View", ('Overview', 'Fundamentals', 'News', 'Owne
 st.title(screen)
 
 if screen == 'Overview':
-  url = f"https://cloud.iexapis.com/stable/tops?token={config.sk_05f62d0b97b84cfbb15650bc980058b0}&symbols={symbol}"
-  r = requests.get(url)
-  response_Fjson = r.json()
-
-  #url = f"https://cloud.iexapis.com/stable/stock/{symbol}/quote/iexRealtimePrice?token={config.sk_05f62d0b97b84cfbb15650bc980058b0}"
+  #url = f"https://cloud.iexapis.com/stable/tops?token={config.sk_05f62d0b97b84cfbb15650bc980058b0}&symbols={symbol}"
   #r = requests.get(url)
-  #response_Qjson = r.json()
+  #response_Fjson = r.json()
+
+  url = f"https://cloud.iexapis.com/stable/stock/{symbol}/quote/iexRealtimePrice?token={config.sk_05f62d0b97b84cfbb15650bc980058b0}"
+  r = requests.get(url)
+  response_Qjson = r.json()
   
   #col1, col2 = st.columns (2)
   
   #with col1:
     #st.subheader.write("FREE:")
-  st.write(response_Fjson)
+  #st.write(response_Fjson)
   
   #with col2:
     #st.subheader.write("QUOTE:")
-    #st.write(response_Qjson)
+    st.write(response_Qjson)
   
   
 
