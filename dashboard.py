@@ -1,10 +1,11 @@
 import streamlit as st
 import requests
-import config
+#import config
 
 from helpers import format_number
 
 symbol = st.sidebar.text_input("Symbol", value="AMC")
+token = st.secrets["token"]
 
 screen = st.sidebar.selectbox("View", ('Overview', 'Fundamentals', 'News', 'Ownership', 'Technicals'))
 
@@ -15,7 +16,7 @@ if screen == 'Overview':
   #r = requests.get(url)
   #response_Fjson = r.json()
 
-  url = f"https://cloud.iexapis.com/stable/stock/{symbol}/quote/iexRealtimePrice?token={st.secrets["token"]}"
+  url = f"https://cloud.iexapis.com/stable/stock/{symbol}/quote/iexRealtimePrice?token={token}"
   r = requests.get(url)
   response_Qjson = r.json()
   
