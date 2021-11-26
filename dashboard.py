@@ -11,15 +11,15 @@ screen = st.sidebar.selectbox("View", ('Overview', 'Fundamentals', 'News', 'Owne
 st.title(screen)
 
 if screen == 'Overview':
-  #url = f"https://cloud.iexapis.com/stable/tops?token={config.sk_05f62d0b97b84cfbb15650bc980058b0}&symbols={symbol}"
+  #url = f"https://cloud.iexapis.com/stable/tops?token={st.secrets["db_token"]}&symbols={symbol}"
   #r = requests.get(url)
   #response_Fjson = r.json()
 
-  url = f"https://cloud.iexapis.com/stable/stock/{symbol}/quote/iexRealtimePrice?token={config.sk_05f62d0b97b84cfbb15650bc980058b0}"
+  url = f"https://cloud.iexapis.com/stable/stock/{symbol}/quote/iexRealtimePrice?token={st.secrets["db_token"]}"
   r = requests.get(url)
   response_Qjson = r.json()
   
-  #url = f"https://cloud.iexapis.com/stable/stock/{symbol}/chart/1d?token={config.sk_05f62d0b97b84cfbb15650bc980058b0}"
+  #url = f"https://cloud.iexapis.com/stable/stock/{symbol}/chart/1d?token={st.secrets["db_token"]}"
   #r = requests.get(url)
   #response_Cjson = r.json()
   
